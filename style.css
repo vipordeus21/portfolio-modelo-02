@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+    color: azure;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.content {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: #1f1e1f;
+    position: fixed;
+    padding: 0 101px; /* Aumenta a margem lateral */
+    font-size: 22px;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between; /* Garante que logo e menu fiquem em lados opostos */
+}
+
+/* Logo */
+.content .logo {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    background: linear-gradient(to right,  #aa046d, #e97dc1, #ffffff );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    flex-grow: 1; /* Faz a logo ocupar mais espaço à esquerda */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Menu */
+.content .menu {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    gap: 40px; /* Ajusta o espaçamento entre os itens */
+}
+
+.content .menu a {
+    color: #aa046d;
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;
+    transition: 0.3s; /* Efeito suave */
+}
+
+.menu a:hover {
+    color: #ffb6c1; /* Rosa claro ao passar o mouse */
+}
+
+.menu a:active {
+    color: #aa046d; /* Rosa escuro ao clicar */
+}
+
+/* Tecnologias */
+.tecno {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Organiza o título e as imagens em coluna */
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    background-color: azure;
+}
+
+.tecno h2 {
+    font-size: 55px;
+    margin-bottom: 59px; /* Espaço entre o título e as imagens */
+    color: #aa046d;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.tecno-imagens {
+    display: flex; /* Organiza as imagens em linha */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 10px; /* Espaçamento entre as imagens */
+    margin: 0 auto;
+    margin-bottom: -35px;
+}
+
+.tecno img {
+    transition: transform 0.3s ease;
+}
+
+.tecno img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Sobre */
+.sobre {
+    background-color: #e97dc1;
+    height: auto;
+    padding-bottom: 2rem 5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 30vh;
+}
+
+.conteudo-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sobre img {
+    width: 270px;
+    height: 250px;
+    border-radius: 140px;
+    box-shadow: 0px 0px 15px 5px #aa046d;
+    margin: 75px auto;
+    margin-left: 8rem;
+    margin-top: 6rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.conteudo-sobre h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-family: 'Indie Flower', cursive;
+    color: #aa046d;
+}
+
+.conteudo-sobre p {
+    text-align: center;
+    font-size: 1.0rem;
+    width: 600px;
+    margin-bottom: -1.5rem;
+    font-weight: bold;
+}
+
+.img-port {
+    align-items: center;
+    margin: 1.8rem;
+    box-shadow: 5px 5px 20px rgba(#aa046d, #e97dc1);
+}
+
+/* Projetos */
+.pros {
+    background-color: #fffcfe;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 70px;
+    color: #aa046d;
+    font-size: 45px;
+    margin-right: 20px;
+}
+
+.pros h2 {
+    margin-bottom: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.pros-jetos {
+    display: flex; /* Organiza as imagens em linha */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 30px; /* Espaçamento entre as imagens */
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.pros-jetos img {
+    transition: transform 0.3s ease;
+    margin-bottom: -35px;
+}
+
+.pros-jetos img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Habilidades */
+.habi {
+    background-color: #fffcfe;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 30px;
+    color: #aa046d;
+    font-size: 45px;
+    text-align: center;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaço entre os itens */
+    align-items: center; /* Centraliza os textos */
+    width: 100%;
+    max-width: 400px; /* Evita que os textos fiquem muito espalhados */
+}
+
+.descricao p {
+    display: block;
+    align-items: center; /* Centraliza ícone e texto verticalmente */
+    justify-content: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 20px;
+    width: 100%;
+    max-width: 300px; /* Limita a largura para evitar desalinhamento */
+    text-align: unset;
+}
+
+.descricao p i {
+    font-size: 24px; /* Ajusta o tamanho do ícone */
+}
+
+.habi h2 {
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Footer */
+footer {
+    background-color: #e97dc1;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .content .logo {
+        font-size: 24px;
+    }
+
+    .content .menu {
+        display: block;
+        text-align: left;
+        gap: 15px;
+        padding-top: 10px;
+    }
+
+    .tecno h2 {
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .tecno-imagens {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobre .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pros-jetos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-port img {
+        max-width: 90%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .pros h2 {
+        font-size: 30px;
+    }
+
+    .descricao p {
+        font-size: 16px;
+    }
+
+    .habi h2 {
+        font-size: 40px;
+    }
+}
